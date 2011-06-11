@@ -34,7 +34,7 @@ case $OSTYPE in
     alias gd='git diff | vim -R -'
     ;;
   darwin*)
-    alias gd='git diff | mate'
+    alias gd='git difftool'
     ;;
   darwin*)
     alias gd='git diff'
