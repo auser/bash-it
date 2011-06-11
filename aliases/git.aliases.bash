@@ -26,6 +26,8 @@ alias gexport='git archive --format zip --output'
 alias gdel='git branch -D'
 alias gmu='git fetch origin -v; git fetch upstream -v; git merge upstream/master'
 alias gll='git log --graph --pretty=oneline --abbrev-commit'
+alias gcam='git commit -v -a -m "$@"'
+alias glog='git log --color --graph --stat'
 
 case $OSTYPE in
   linux*)
@@ -58,6 +60,8 @@ function git-help() {
   echo "  gdv     = git diff -w \"$@\" | vim -R -"
   echo "  gc      = git commit -v"
   echo "  gca     = git commit -v -a"
+  echo "  gcam    = git commit -v -a -m \"$@\""
+  echo "  glog    = git log --color --graph --stat"
   echo "  gci 	  = git commit --interactive"
   echo "  gb      = git branch"
   echo "  gba     = git branch -a"
