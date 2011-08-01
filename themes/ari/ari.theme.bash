@@ -16,3 +16,4 @@ function rvm_version_prompt {
 
 # Check http://github.com/Sirupsen/dotfiles for screenshot
 PS1='\[$green\]\W/\[$bold_blue\]$(rvm_version_prompt)\[$bold_green\]$(__git_ps1 " (%s)") \[${normal}\]$ '
+PS1='\[$purple\]\W/$(rvm_version_prompt)\[$yellow\]$(__git_ps1 " (%s)") \[${normal}\]$ '
