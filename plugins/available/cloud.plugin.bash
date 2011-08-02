@@ -24,7 +24,6 @@ function cloud_env() {
     if [ -d "$DIR" ]; then
       if [ -f "$DIR/novarc" ]; then
         source $DIR/novarc
-        echo "$1" > $CURRENT_CLOUD_ENVIRONMENT_FILE
         _current_cloud_env $1
       elif [ -f "$DIR/environment" ]; then
         source $DIR/environment
@@ -37,3 +36,6 @@ function cloud_env() {
     fi
   fi
 }
+
+# Restore the old cloud_env
+cloud_env $(_current_cloud_env)
