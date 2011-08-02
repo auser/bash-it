@@ -2,8 +2,7 @@
 
 # functions
 function apply_template {
-  a=$(md5 -q $1 || "")
-  b=$(md5 -q $2 || "")
+  a=$(md5 -q $1 || ""); b=$(md5 -q $2 || "")
   
   if [ "$a" != "$b" ]; then 
     echo "Replacing $1 with $2"
