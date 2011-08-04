@@ -36,3 +36,4 @@ fi
 
 # Templates
 apply_template $HOME/.tmux.conf $DIR/template/tmux.template.conf
+apply_template $HOME/.gitconfig $DIR/template/gitconfig.template.sh
