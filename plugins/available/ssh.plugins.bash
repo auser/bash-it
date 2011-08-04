@@ -7,3 +7,7 @@ function add_ssh() {
 function sshlist() {
   awk '$1 ~ /Host$/ { print $2 }' ~/.ssh/config
 }
+
+function sshc() {
+  ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $*
+}
