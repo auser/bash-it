@@ -10,6 +10,10 @@ function apply_template {
   fi
 }
 
+function abspath {
+  `cd $1; pwd`
+}
+
 # VARIABLES
 RUBY=$(which ruby)
 SCRIPT="$(cd "${0%/*}" 2>/dev/null; echo "$PWD"/"${0##*/}")"
@@ -34,6 +38,16 @@ if [ -z $(which tmux) ]; then
   $BREW install tmux
 fi
 
+# Directories
+declare -a directories=(vim \
+                        bin )
+for d in ${directories[@]}; do
+  target=$HOME/.$(basename $d)/
+  source=$PWD/$d
+  `ln -nFs $source $target`
+done
+
 # Templates
+apply_template $HOME/.vimrc $DIR/template/vimrc.template.sh
 apply_template $HOME/.tmux.conf $DIR/template/tmux.template.conf
 apply_template $HOME/.gitconfig $DIR/template/gitconfig.template.sh

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+rvm wrapper $2@textmate textmate

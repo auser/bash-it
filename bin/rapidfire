@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'commander/import'
+
+# :name is optional, otherwise uses the basename of this executable
+program :name, 'Rapidfire'
+program :version, '0.0.1'
+program :description, 'Rapidfire -- Rapidly do things'
+
