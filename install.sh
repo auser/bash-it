@@ -42,9 +42,9 @@ fi
 declare -a directories=(vim \
                         bin )
 for d in ${directories[@]}; do
-  target=$HOME/.$(basename $d)/
+  target=$HOME/.$(basename $d)
   source=$PWD/$d
-  `ln -nFs $source $target`
+  `ln -nFs $source $target/`
 done
 
 # Templates
