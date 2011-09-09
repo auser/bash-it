@@ -48,6 +48,7 @@ for d in ${directories[@]}; do
 done
 
 # Templates
-apply_template $HOME/.vimrc $DIR/template/vimrc.template.sh
+# apply_template $HOME/.vimrc $DIR/template/vimrc.template.sh
 apply_template $HOME/.tmux.conf $DIR/template/tmux.template.conf
 apply_template $HOME/.gitconfig $DIR/template/gitconfig.template.sh
+apply_template $HOME/.gitconfig $DIR/template/inputrc.template.sh
